@@ -11,7 +11,7 @@
         <title>Meu Portfólio</title>
     </head>
     <body>
-        <header class="header__content">
+        <header class="header__content" id="home">
             <div class="container__principal">
                 <div class="header__menu__hamburger">
                     <div class="header__menu__line" id="line"></div>
@@ -33,11 +33,11 @@
                 <aside class="header__sidebar">
                     <nav>
                         <ul class="header__menu__sidebar">
-                            <li class="header__menu__item"><a href="#" class="header__menu__link">Home</a></li>
-                            <li class="header__menu__item"><a href="#" class="header__menu__link">Conhecimento</a></li>
-                            <li class="header__menu__item"><a href="#" class="header__menu__link">Projetos</a></li>
-                            <li class="header__menu__item"><a href="#" class="header__menu__link">Contato</a></li>
-                            <li class="header__menu__item"><a href="#" class="header__menu__link">Orçamento</a></li>
+                            <li class="header__menu__item"><a href="#home" class="header__menu__link">Home</a></li>
+                            <li class="header__menu__item"><a href="#conhecimentos" class="header__menu__link">Conhecimento</a></li>
+                            <li class="header__menu__item"><a href="#projetos" class="header__menu__link">Projetos</a></li>
+                            <li class="header__menu__item"><a href="#contato" class="header__menu__link">Contato</a></li>
+                            <li class="header__menu__item"><a href="#orcamento" class="header__menu__link">Orçamento</a></li>
                         </ul>
                     </nav>
                     <div class="header__social__media">
@@ -49,7 +49,7 @@
             </div> <!-- Container__principal-->
         </header>
 
-        <section class="sessao__conhecimentos">
+        <section class="sessao__conhecimentos" id="conhecimentos">
             <div class="container__principal">
                 <div class="sessao__conhecimentos__header">
                     <h1>Conhecimentos</h1>
@@ -121,6 +121,117 @@
             </div>
         </section>
 
+        <section class="sessao__projetos" id="projetos">
+            <div class="sessao__projetos__header">
+                <h1>Projetos</h1>
+            </div>
+            <div class="sessao__projetos__card">
+                <div class="projetos__card__single">
+                    <div class="projetos__card__img__wraper">
+                        <img src="img/proj1.jpg" alt="Projeto 1">
+                    </div>
+                    <div class="projetos__card__info">
+                        <h2>ToDo List</h2>
+                        <h3>JavaScript</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium debitis, eos libero nam animi delectus a dolor consequuntur veritatis corporis similique recusandae numquam accusantium corrupti assumenda enim itaque dicta? Accusamus.</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+
+                <div class="projetos__card__single">
+                    <div class="projetos__card__img__wraper">
+                        <img src="img/proj2.jpg" alt="Projeto 2">
+                    </div>
+                    <div class="projetos__card__info">
+                        <h2>Maratona</h2>
+                        <h3>HTML, CSS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium cupiditate aperiam aut quam quaerat perspiciatis impedit molestias temporibus excepturi corrupti, culpa, odio saepe mollitia architecto deleniti? Voluptates, non? Ipsam?</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+
+                <div class="projetos__card__single">
+                    <div class="projetos__card__img__wraper">
+                        <img src="img/proj3.jpg" alt="Projeto 3">
+                    </div>
+                    <div class="projetos__card__info">
+                        <h2>Casa Bela</h2>
+                        <h3>HTML</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique aperiam soluta animi debitis voluptatem perferendis id sit cupiditate accusantium? Vitae similique distinctio autem totam blanditiis impedit, aut at non?</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sessao__contato" id="contato">
+            <div class="sessao__contato__wrapper">
+                <div class="sessao__contato__left"></div>
+                <div class="sessao__contato__right">
+                    <h1>Contato</h1>
+                    <form>
+                        <div class="contato__input__group">
+                            <input type="text" class="contato__input__field" id="name">
+                            <label for="name" class="contato__field__label">Nome</label>
+                        </div>
+                        <div class="contato__input__group">
+                            <input type="email" class="contato__input__field" id="email">
+                            <label for="email" class="contato__field__label">E-mail</label>
+                        </div>
+                        <div class="contato__input__group">
+                            <textarea class="contato__input__field" id="mensagem"></textarea>
+                            <label for="mensagem" class="contato__field__label">Mensagem</label>
+                        </div>
+                        <button type="submit" value="Enviar!">Enviar!</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="sessao__orcamento" id="orcamento">
+            <div class="orcamento__wrapper">
+                <h1>Faça um orçamento</h1>
+                <form>
+                    <label for="qtde">Quantidade de Páginas</label>
+                    <input type="number" min="1" max="10" name="qtde" id="qtde">
+                    <label for="js">Preciso de um scrpit JavaScript</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="orcamento__group__layout">
+                        <div>
+                            <label for="layout-sim">Preciso de um layout</label>
+                            <input type="radio" name="layout" id="layout-sim">
+                        </div>
+
+                        <div>
+                            <label for="layout-nao">Já tenho um layout</label>
+                            <input type="radio" name="layout" id="layout-nao">
+                        </div>
+                    </div>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo">
+                    <label id="preco">R$ 0,00</label>
+                    <button type="submit" value="Enviar!">Enviar!</button>
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer__content">
+                <p>Copyright &copy; 2020, ESTECIA DS - Todos os direitos reservados</p>
+                <div class="social__list__footer">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#home" id="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </body>
     <script src="js/script.js"></script>
 </html>

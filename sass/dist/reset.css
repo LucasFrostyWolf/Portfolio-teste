@@ -10,3 +10,12 @@ html, body {
   background-color: #9b009b;
   color: white;
 }
+
+a {
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+ul, li {
+  list-style: none;
+}

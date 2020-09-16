@@ -13,6 +13,15 @@ html, body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+ul, li {
+  list-style: none;
+}
+
 section.header__content {
   width: 100%;
   min-height: 800px;
@@ -53,14 +62,14 @@ section.header__content header {
   position: absolute;
   z-index: 3;
   left: 15%;
-  top: 30%;
+  top: 40%;
 }
 .header__banner h1 {
   font-size: 3.5em;
   font-family: "Baloo Da 2";
   font-weight: 200;
   text-shadow: 0.9rem 1.4rem 2px rgba(0, 0, 0, 0.7);
-  line-height: 3.5rem;
+  line-height: 1.6em;
   margin-bottom: 10px;
   animation: moveBanner 1s 0.5s forwards;
   opacity: 0;
@@ -71,6 +80,7 @@ section.header__content header {
   text-shadow: 1rem 1.3rem black;
   animation: moveBanner 1s 0.7s forwards;
   opacity: 0;
+  line-height: 2em;
 }
 
 .header__banner button {
@@ -91,6 +101,140 @@ section.header__content header {
 }
 .header__banner button:hover {
   color: white;
+}
+
+.header__menu__hamburger {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  z-index: 5;
+  right: 2rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition-duration: 0.6s;
+  transition-delay: 0.1s;
+  cursor: pointer;
+}
+.header__menu__hamburger .header__menu__line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  box-shadow: 0.2rem 0.3rem 1px black;
+  transition: transform 1s;
+}
+.header__menu__hamburger span {
+  position: absolute;
+  background-color: #3c1053;
+  top: -0.4rem;
+  left: 4rem;
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mulish";
+  opacity: 0;
+}
+.header__menu__hamburger span::before {
+  content: "";
+  position: absolute;
+  border-right: 0.5rem solid #3c1053;
+  border-left: 0.5rem solid transparent;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  left: -1rem;
+}
+
+.header__menu__show .header__menu__line {
+  box-shadow: none;
+}
+
+.header__menu__show #line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__menu__show #line {
+  transform: rotate(45deg);
+  color: black;
+  background-color: black;
+}
+
+.header__menu__show #line3 {
+  transform: rotate(135deg);
+  position: relative;
+  top: -25px;
+  left: 1px;
+  color: black;
+  background-color: black;
+}
+
+.header__menu__show .header__menu__hamburger:hover span {
+  opacity: 1;
+}
+
+.header__sidebar {
+  position: fixed;
+  z-index: 4;
+  width: 20rem;
+  height: 100vh;
+  background-color: #ffffff;
+  top: 0;
+  right: -20rem;
+  transition: 1s;
+}
+.header__sidebar .header__menu__sidebar {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__sidebar .header__menu__sidebar .header__menu__item {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.header__sidebar .header__menu__sidebar .header__menu__item a.header__menu__link {
+  color: #555;
+  font-family: "Mulish";
+  transition: 1s;
+  font-size: 1.8em;
+}
+.header__sidebar .header__menu__sidebar .header__menu__item a.header__menu__link:hover {
+  text-decoration: underline;
+  color: #a600ff;
+}
+
+.header__menu__show .header__sidebar {
+  right: 0;
+}
+
+.header__menu__show .header__menu__hamburger {
+  right: 15rem;
+}
+
+.header__social__media {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header__social__media i {
+  background-color: #410363;
+  color: #ffffff;
+  font-size: 2.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 1s;
+}
+.header__social__media i:hover {
+  background-color: #a407f8;
 }
 
 @keyframes zoom {

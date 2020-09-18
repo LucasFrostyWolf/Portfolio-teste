@@ -8,9 +8,23 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="site.webmanifest">
+        <script src="js/jquery.js"></script>
+        <link rel="preload" href="sass/dist/style.css" as="style">
+        <link rel="preload" href="js/script.js" as="script">
+        <link rel="preload" href="js/jquery.js" as="script">
         <title>Meu Portfólio</title>
     </head>
     <body>
+        <div class="spinner-wrapper">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+            
+        
         <header class="header__content" id="home">
             <div class="container__principal">
                 <div class="header__menu__hamburger">
@@ -37,7 +51,6 @@
                             <li class="header__menu__item"><a href="#conhecimentos" class="header__menu__link">Conhecimento</a></li>
                             <li class="header__menu__item"><a href="#projetos" class="header__menu__link">Projetos</a></li>
                             <li class="header__menu__item"><a href="#contato" class="header__menu__link">Contato</a></li>
-                            <li class="header__menu__item"><a href="#orcamento" class="header__menu__link">Orçamento</a></li>
                         </ul>
                     </nav>
                     <div class="header__social__media">
@@ -187,34 +200,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="sessao__orcamento" id="orcamento">
-            <div class="orcamento__wrapper">
-                <h1>Faça um orçamento</h1>
-                <form>
-                    <label for="qtde">Quantidade de Páginas</label>
-                    <input type="number" min="1" max="10" name="qtde" id="qtde">
-                    <label for="js">Preciso de um scrpit JavaScript</label>
-                    <input type="checkbox" name="js" id="js">
-                    <label>Layout</label>
-                    <div class="orcamento__group__layout">
-                        <div>
-                            <input type="radio" name="layout" id="layout-sim">
-                            <label for="layout-sim">Preciso de um layout</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" name="layout" id="layout-nao">
-                            <label for="layout-nao">Já tenho um layout</label>
-                        </div>
-                    </div>
-                    <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo" min="1" max="10">
-                    <label id="preco">R$ 0,00</label>
-                    <button type="submit" value="Enviar!">Enviar!</button>
-                </form>
-            </div>
-        </section>
         
         <footer>
             <div class="footer__content">
@@ -232,6 +217,17 @@
         <a href="#home" id="link-topo">
             <i class="fas fa-arrow-up"></i>
         </a>
+        <script>
+            $(window).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 3000;
+            function hidePreloader() {
+            var preloader = $('.spinner-wrapper');
+            preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+            });
+        </script>
     </body>
     <script src="js/script.js"></script>
 </html>
